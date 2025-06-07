@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfolio | Guilherme</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sobre">SOBRE MIM</a></li>
+                <li><a href="#tecnologias">TECNOLOGIAS</a></li>
+                <li><a href="#projetos">PROJETOS</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>GUILHERME MAGALHÃES</h1>
+            <a href="Curriculo-GuilhermeMagalhães.pdf" target="_blank" rel="noopener noreferrer" class="btn-cv">BAIXAR
+                CV</a>
+        </div>
+        <div class="hero-imagem">
+            <img src="img/guilherme-foto.jpg" alt="imagem-menino">
+        </div>
+    </section>
+    <section id="sobre">
+        <div class="section-sobre-text">
+            <div class="sobre-title">
+                <p>QUEM SOU EU?</p>
+            </div>
+            <div class="sobre-text">
+                <p>Prazer, me chamo Guilherme e atualmente sou estudante do curso Sistemas de Informação na Faculdade
+                    Impacta Tecnologia (FIT).
+                    Me formei no curso PROPROFISSÃO fornecido pelo Instituto PROA, onde desenvolvi minhas hards e soft
+                    skills. Gosto de desafios e estou sempre em busca de criar projetos inovadores!</p>
+            </div>
+        </div>
+        <div class="sobre-imagem">
+            <div class="imagem-hover" onclick="trocarImagem(this)">
+                <img src="img/foto-studio-ghibli.png" alt="imagem-menino-segurando-premio-versão-anime"
+                    class="foto-base">
+                <img src="img/foto-original.jpg" alt="imagem-menino-segurando-prêmio" class="foto-hover">
+            </div>
+        </div>
+    </section>
+    <section id="tecnologias">
+        <div class="cards-tecnologias">
+            <div class="card">
+                <div class="title">
+                    <p>FRONT-END</p>
+                    <img src="icons/icon-frontend.svg" alt="icon-tag-fechamento-html">
+                </div>
+                <div class="icons">
+                    <img src="icons/icon-html5.svg" alt="icon-html5">
+                    <img src="icons/icon-css3.svg" alt="icon-css3">
+                    <img src="icons/icon-javascript.svg" alt="icon-javascript">
+                    <img src="icons/icon-react.svg" alt="icon-react">
+                </div>
+                <div class="descricao">
+                    <p>HTML5, CSS3, JAVASCRIPT e REACT</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="title">
+                    <p>BACK-END</p>
+                    <img src="icons/icon-backend.svg" alt="icon-sistema">
+                </div>
+                <div class="icons">
+                    <img src="icons/icon-python.svg" alt="icon-python">
+                    <img src="icons/icon-csharp.svg" alt="icon-csharp">
+                    <img src="icons/icon-java.svg" alt="icon-java">
+                </div>
+                <div class="descricao">
+                    <p>PYTHON, CSHARP e JAVA</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="title">
+                    <p>OUTROS</p>
+                    <img src="icons/icon-outros.svg" alt="icon-computador">
+                </div>
+                <div class="icons">
+                    <img src="icons/icon-figma.svg" alt="icon-figma">
+                    <img src="icons/icon-postgre.svg" alt="icon-postgresql">
+                    <img src="icons/icon-git.svg" alt="icon-git">
+                </div>
+                <div class="descricao">
+                    <p>FIGMA, POSTGRESQL e GIT</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projetos">
+        <div class="imagem-projetos-erro">
+            <img src="img/imagem-manutencao.png" alt="imagem-indicando-manutenção">
+        </div>
+    </section>
+    <section id="contato">
+        <div class="container-card">
+            <a href="mailto:guilherme.maga28@gmail.com" target="_blank">
+                <div class="card-contato">
+                    <img src="icons/icon-email.svg" alt="icone-de-email">
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/guilhermemagalh%C3%A3es28/" target="_blank">
+                <div class="card-contato">
+
+                    <img src="icons/icon-linkedin.svg" alt="icone-de-linkedin">
+
+                </div>
+            </a>
+            <a href="https://github.com/gui-macedo-7" target="_blank">
+                <div class="card-contato">
+                    <img src="icons/icon-github.svg" alt="icone-de-github">
+                </div>
+            </a>
+        </div>
+    </section>
+    <footer>
+        <div class="linha"></div>
+        <p>© Todos os direitos reservados | Guilherme Magalhães</p>
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -19,6 +19,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* outline: 1px solid red; */
 }
 
 html {
@@ -47,7 +48,7 @@ header nav ul li a {
     padding: 0.5rem 2rem;
     color: var(--secondary);
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 5vw, 1.3rem);
 }
 
 
@@ -56,7 +57,7 @@ header nav ul li a {
     display: flex;
     align-items: center;
     gap: 1rem;      
-    margin: 2rem 3rem;          
+    margin: 2rem 1rem;          
 }
 
 .intro-text {
@@ -67,7 +68,7 @@ header nav ul li a {
 
 .intro-text h1 {
     font-family: var(--font-secondary);
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 5vw, 1.3rem);
     font-weight: 600;
     color: var(--tertiary);
     white-space: nowrap;
@@ -81,9 +82,9 @@ header nav ul li a {
     background-color: var(--button);
     color: var(--primary);
     font-family: var(--font-secondary);
-    padding: 0.6rem 1rem;
+    padding: 0.5rem 0.9rem;
     border-radius: 0.75rem;
-    font-size: 0.9rem;
+    font-size: clamp(0.5rem, 3vw, 1rem);
     font-weight: 600;
     width: max-content;
 }
@@ -92,18 +93,17 @@ header nav ul li a {
 .intro-imagem {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .intro-imagem img {
     width: 20vw;
-    max-width: 180px;
+    max-width: 100px;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     object-fit: cover;
     object-position: top center;
     border: 1.5px solid #424242;
-    margin-right: 0.5rem;
 }
 
 
@@ -297,6 +297,6 @@ footer p {
     font-family: var(--font-primary);
     color: var(--tertiary);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: clamp(0.6rem, 2.5vw, 0.85rem);
     margin: 0;
 }

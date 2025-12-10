@@ -35,7 +35,7 @@ Sou apaixonado por tecnologia, inovação e estou sempre em busca de novos desaf
 ## 🚀 Acesse o Projeto Online
 
 Você pode acessar meu portfólio clicando no link abaixo:  
-🔗 [https://guilherme-portfolio-seven.vercel.app/]([https://guilherme-portfolio-seven.vercel.app/])
+🔗 [Acesse meu portfólio](https://guilherme-portfolio-seven.vercel.app/)
 
 ---
 

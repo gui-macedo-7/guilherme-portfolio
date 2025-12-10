@@ -24,7 +24,6 @@ Sou apaixonado por tecnologia, inovação e estou sempre em busca de novos desaf
 ### 🛠️ Back-end:
 - Python
 - C#
-- Java
 
 ### 🧩 Outros:
 - Git

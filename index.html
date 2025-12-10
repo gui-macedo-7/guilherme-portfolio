@@ -24,9 +24,9 @@
         </nav>
     </header>
     <!-- Seção Intro-->
-    <section class="intro">
-        <div class="intro-text">
-            <h1>GUILHERME MAGALHÃES</h1>
+    <section id="intro" class="intro">
+        <div class="intro-container">
+            <h1 class="intro-titulo">GUILHERME MAGALHÃES</h1>
             <a href="Curriculo-GuilhermeMagalhães.pdf" target="_blank" rel="noopener noreferrer" class="btn-cv">BAIXAR
                 CV</a>
         </div>
@@ -35,12 +35,12 @@
         </div>
     </section>
     <!-- Seção Sobre Mim-->
-    <section id="sobre">
-        <div class="section-sobre-text">
-            <div class="sobre-title">
+    <section id="sobre" class="sobre">
+        <div class="sobre-textos">
+            <div class="sobre-titulo">
                 <p>QUEM SOU EU?</p>
             </div>
-            <div class="sobre-text">
+            <div class="sobre-descricao">
                 <p>Prazer, me chamo Guilherme e atualmente sou estudante do curso Sistemas de Informação na Faculdade
                     Impacta Tecnologia (FIT).
                     Me formei no curso PROPROFISSÃO fornecido pelo Instituto PROA, onde desenvolvi minhas hards e soft
@@ -51,15 +51,17 @@
             <div class="imagem-hover" onclick="trocarImagem(this)">
                 <img src="img/foto-studio-ghibli.png" alt="imagem-menino-segurando-premio-versão-anime"
                     class="foto-base">
-                <img src="img/foto-original.jpg" alt="imagem-menino-segurando-prêmio" class="foto-hover">
+                <img src="img/foto-original.jpg" class="foto-hover" alt="imagem-menino-segurando-prêmio">
             </div>
         </div>
     </section>
     <!-- Seção Tecnologias Usadas-->
-    <section id="tecnologias">
+    <section id="tecnologias" class="tecnologias">
         <div class="cards-tecnologias">
+
+            <!-- Card 1 - FRONT-END -->
             <div class="card">
-                <div class="title">
+                <div class="card-titulo">
                     <p>FRONT-END</p>
                     <img src="icons/icon-frontend.svg" alt="icon-tag-fechamento-html">
                 </div>
@@ -69,13 +71,14 @@
                     <img src="icons/icon-javascript.svg" alt="icon-javascript">
                     <img src="icons/icon-react.svg" alt="icon-react">
                 </div>
-                <div class="descricao">
+                <div class="tecnologias-descricao">
                     <p>HTML5, CSS3, JAVASCRIPT e REACT</p>
                 </div>
             </div>
 
+            <!-- Card 2 - BACK-END -->
             <div class="card">
-                <div class="title">
+                <div class="card-titulo">
                     <p>BACK-END</p>
                     <img src="icons/icon-backend.svg" alt="icon-sistema">
                 </div>
@@ -83,13 +86,14 @@
                     <img src="icons/icon-python.svg" alt="icon-python">
                     <img src="icons/icon-csharp.svg" alt="icon-csharp">
                 </div>
-                <div class="descricao">
+                <div class="tecnologias-descricao">
                     <p>PYTHON e CSHARP</p>
                 </div>
             </div>
 
+            <!-- Card 3 - OUTROS -->
             <div class="card">
-                <div class="title">
+                <div class="card-titulo">
                     <p>OUTROS</p>
                     <img src="icons/icon-outros.svg" alt="icon-computador">
                 </div>
@@ -98,14 +102,45 @@
                     <img src="icons/icon-sql.svg" alt="icon-sql">
                     <img src="icons/icon-git.svg" alt="icon-git">
                 </div>
-                <div class="descricao">
+                <div class="tecnologias-descricao">
                     <p>FIGMA, SQL e GIT</p>
                 </div>
             </div>
+
+        </div>
+    </section>
+    <!-- Seção de Projetos -->
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">CONHEÇA MEUS PROJETOS</h2>
+        <div class="projetos-container">
+
+            <!-- Card 1 - DESTAQUES -->
+            <a href="#" class="categoria-card">
+                <div class="categoria-imagem destaque-img"></div>
+                <div class="categoria-footer">
+                    <p>DESTAQUES</p>
+                </div>
+            </a>
+            <!-- Card 2 - HTML e CSS -->
+            <a href="#" class="categoria-card">
+                <div class="categoria-imagem htmlcss-img"></div>
+                <div class="categoria-footer">
+                    <p>HTML e CSS</p>
+                </div>
+            </a>
+            <!-- Card 3 - HTML, CSS e JAVASCRIPT -->
+            <a href="#" class="categoria-card">
+                <div class="categoria-imagem javascript-img"></div>
+                <div class="categoria-footer">
+                    <p>HTML, CSS e JAVASCRIPT</p>
+                </div>
+            </a>
+
         </div>
     </section>
     <!-- Seção Contato -->
-    <section id="contato">
+    <section id="contato" class="contato">
+        <h2 class="contato-titulo">ENTRE EM CONTATO</h2>
         <div class="container-card">
             <a href="mailto:guilherme.maga28@gmail.com" target="_blank">
                 <div class="card-contato">
@@ -126,7 +161,8 @@
             </a>
         </div>
     </section>
-    <!-- Footer-->
+    
+    <!-- Footer -->
     <footer>
         <div class="linha"></div>
         <p>© 2025 Todos os direitos reservados | Guilherme Magalhães</p>

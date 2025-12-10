@@ -59,7 +59,7 @@ header nav ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;       
+    gap: 1rem;
 }
 
 .intro-container {
@@ -73,7 +73,7 @@ header nav ul li a {
 
 .intro-titulo {
     font-family: var(--font-secondary);
-    font-size: clamp(1rem, 5vw, 1.3rem);
+    font-size: clamp(1rem, 5vw, 1.5rem);
     font-weight: 600;
     color: var(--tertiary);
 }
@@ -88,12 +88,11 @@ header nav ul li a {
     font-family: var(--font-secondary);
     padding: 0.5rem 0.9rem;
     border-radius: 0.75rem;
-    font-size: clamp(0.5rem, 3vw, 1rem);
+    font-size: clamp(0.5rem, 2vw, 1rem);
     font-weight: 600;
     width: max-content;
 }
 
-/* Imagem */
 .intro-imagem {
     width: auto;
     display: flex;
@@ -118,6 +117,7 @@ header nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
 }
 
@@ -130,7 +130,6 @@ header nav ul li a {
     font-family: var(--font-secondary);
     font-weight: 600;
     margin-bottom: 0.5rem;
-    font-size: 1.2rem;
     font-size: clamp(0.8rem, 4vw, 1.1rem);
 }
 
@@ -142,10 +141,8 @@ header nav ul li a {
     line-height: 1.5;
 }
 
-/* --- Imagem --- */
 .sobre-imagem {
     width: clamp(100px, 30vw, 140px);
-    max-width: 220px;  
     aspect-ratio: 1/1;
 }
 
@@ -164,7 +161,7 @@ header nav ul li a {
     height: 100%;
     border-radius: 1rem;
     transition: opacity .4s ease;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
 }
 
 .foto-hover {
@@ -240,6 +237,7 @@ header nav ul li a {
     margin-bottom: 0.9rem;
 }
 
+
 /* === SEÇÃO PROJETOS === */
 .projetos {
     padding: 2rem 1.5rem;
@@ -264,7 +262,8 @@ header nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    justify-content: center;
+    gap: 3rem;
 }
 
 .categoria-card {
@@ -296,22 +295,19 @@ header nav ul li a {
 
 .categoria-footer p {
     font-family: var(--font-primary);
-    font-size: 0.9rem;
+    font-size: clamp(0.6rem, 3.5vw, 1rem);
     font-weight: 600;
     color: var(--primary);
 }
 
-/* Imagem Card 1 */
 .destaque-img {
     background-image: url();
 }
 
-/* Imagem Card 2 */
 .htmlcss-img {
     background-image: url();
 }
 
-/* Imagem Card 3 */
 .javascript-img {
     background-image: url();
 }
@@ -338,8 +334,8 @@ header nav ul li a {
 .container-card {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 1.5rem;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .card-contato {
@@ -376,13 +372,144 @@ footer {
     height: 3px;
     background-color: var(--secondary);
     margin-bottom: 1rem;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 footer p {
     font-family: var(--font-primary);
     color: var(--tertiary);
     font-weight: 600;
-    font-size: clamp(0.6rem, 2.5vw, 0.75rem);
+    font-size: clamp(0.6rem, 2.5vw, 0.8rem);
     margin: 0;
+}
+
+
+/* === TELA 768px - HEADER === */
+@media(min-width: 768px) {
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+
+    header nav ul li a {
+        padding: 0.5rem 1.5rem;
+        font-size: clamp(0.9rem, 2vw, 1.1rem);
+    }
+}
+
+/* === TELA 768px - INTRO === */
+@media(min-width: 768px) {
+    .intro {
+        gap: 2rem;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .intro-container {
+        max-width: 50%;
+        align-items: flex-start;
+    }
+
+    .btn-cv {
+        font-size: clamp(0.7rem, 1vw, 1rem);
+    }
+
+    .intro-imagem img {
+        max-width: 120px;
+    }
+}
+
+
+/* === TELA 768px - SOBRE MIM === */
+@media(min-width: 768px) {
+    .sobre {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 2rem;
+    }
+
+    .sobre-textos {
+        max-width: 530px;
+    }
+
+    .sobre-titulo p {
+        font-size: clamp(0.8rem, 4vw, 1.1rem);
+    }
+
+    .sobre-descricao p {
+        font-size: clamp(0.8rem, 4vw, 1rem);
+    }
+
+    .sobre-imagem {
+        width: clamp(100px, 30vw, 130px);
+    }
+}
+
+
+/* === TELA 768px - TECNOLOGIAS === */
+@media(min-width: 768px) {
+    .card-titulo p {
+        font-size: clamp(0.8rem, 2.5vw, 1.3rem);
+    }
+
+    .tecnologias-descricao {
+        font-size: clamp(0.7rem, 2vw, 0.9rem);
+        text-align: center;
+    }
+
+    .card-titulo img {
+        width: clamp(15px, 3vw, 30px);
+    }
+
+    .card .icons img {
+        width: clamp(20px, 5vw, 35px);
+        margin-bottom: 0.9rem;
+    }
+}
+
+
+/* === TELA 768px - PROJETOS === */
+@media(min-width: 768px) {
+
+    .projetos-container {
+        flex-direction: row;
+    }
+
+    .categoria-card {
+        width: clamp(140px, 23vw, 180px);
+        height: clamp(140px, 23vw, 180px);
+    }
+
+    .categoria-footer p {
+        font-size: clamp(0.6rem, 3vw, 0.9rem);
+    }
+}
+
+
+/* === TELA 768px - CONTATOS === */
+@media(min-width: 768px) {
+    .card-contato {
+        width: clamp(80px, 25vw, 120px);
+        height: clamp(70px, 20vw, 80px);
+    }
+
+    .container-card {
+        flex-wrap: nowrap;
+    }
+
+    .card-contato img {
+        width: clamp(25px, 8vw, 35px);
+    }
+}
+
+
+/* === TELA 768px - FOOTER === */
+@media(min-width: 768px) {
+    .linha {
+        width: 70px;
+    }
 }

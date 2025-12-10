@@ -35,7 +35,7 @@ Sou apaixonado por tecnologia, inovação e estou sempre em busca de novos desaf
 ## 🚀 Acesse o Projeto Online
 
 Você pode acessar meu portfólio clicando no link abaixo:  
-🔗 [https://gui-macedo-7.github.io/guilherme-portfolio]([https://gui-macedo-7.github.io/guilherme-portfolio](https://guilherme-portfolio-seven.vercel.app/])
+🔗 [https://guilherme-portfolio-seven.vercel.app/]([https://guilherme-portfolio-seven.vercel.app/])
 
 ---
 

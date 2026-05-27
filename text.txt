@@ -1,4 +1,6 @@
 /* Mobile first */
+Padrão: 360px
+
 @media (min-width: 480px) { ... }   /* celulares maiores */
 @media (min-width: 768px) { ... }   /* tablets */
 @media (min-width: 1024px) { ... }  /* notebooks */

@@ -3,7 +3,7 @@ const menu = document.querySelector('.menu')
 const body = document.querySelector('body')
 
 menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active')
+    const menuAberto = menu.classList.toggle('active')
     body.classList.toggle('scroll-disable')
 })
 

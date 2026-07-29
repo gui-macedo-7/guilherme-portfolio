@@ -35,6 +35,7 @@ body.scroll-disable {
     overflow: hidden;
 }
 
+
 /* === HEADER === */
 header {
     background: var(--primary);
@@ -163,6 +164,7 @@ header nav a {
     border: 1.5px solid #94A3B8;
 }
 
+
 /* === SEÇÃO SOBRE MIM === */
 .section-sobre {
     padding: 2rem 1rem;
@@ -197,22 +199,26 @@ header nav a {
     border: 1.5px solid #94A3B8;
 }
 
+
 /* === SEÇÃO TECNOLOGIAS === */
 .section-tecnologias {
     padding: 3rem 1rem;
 }
 
 .cards-tecnologias {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1rem;
-    align-items: center;
-    justify-content: center;
 }
 
 .card {
-    width: 80%;
+    width: 100%;
+    max-width: 300px;
+    justify-self: center;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     border: 2px solid var(--secondary);
     border-radius: 1rem;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
@@ -222,24 +228,23 @@ header nav a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 1rem;
 }
 
 .card-titulo p {    
     font-family: var(--font-primary);
     color: var(--tertiary);
-    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    font-size: clamp(0.8rem, 5vw, 1.1rem);
     font-weight: 600;
 }
 
 .card-titulo img {
-    width: 20px;
+    width: clamp(20px, 6vw, 25px);
 }
 
 .tecnologias-descricao {
     font-family: var(--font-primary);
     color: var(--tertiary);
-    font-size: clamp(0.65rem, 2vw, 0.80rem);
+    font-size: clamp(0.6rem, 3vw, 0.7rem);
     font-weight: 600;
     text-align: center;
 }
@@ -253,42 +258,36 @@ header nav a {
 }
 
 .card .icons img {
-    width: 25px;
-    margin-bottom: 0.9rem;
+    width: clamp(22px, 7vw, 27px);
 }
 
 
 /* === SEÇÃO PROJETOS === */
 .section-projetos {
     padding: 2rem 1rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
 }
 
 .projetos-titulo {
     font-family: var(--font-secondary);
     color: var(--tertiary);
-    font-size: clamp(1rem, 4vw, 1.3rem);
+    font-size: clamp(1rem, 4vw, 1.2rem);
     font-weight: 700;
-    margin-bottom: 1rem;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .projetos-container {
     width: 100%;
     padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
     gap: 2rem;
 }
 
 .categoria-card {
-    width: 160px;
-    height: 160px;
+    width: clamp(140px, 38vw, 190px);
+    aspect-ratio: 1;
     border-radius: 1rem;
     border: 3px solid var(--secondary);
     overflow: hidden;
@@ -299,23 +298,15 @@ header nav a {
     text-decoration: none;
 }
 
-.categoria-imagem {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: left;
-    filter: brightness(0.75);
-}
-
 .categoria-footer {
     background-color: var(--secondary);
-    padding: 0.8rem;
+    padding: 1rem;
     z-index: 1;
 }
 
 .categoria-footer p {
     font-family: var(--font-primary);
-    font-size: clamp(0.75rem, 3vw, 0.9rem);
+    font-size: clamp(0.7rem, 3vw, 1rem);
     font-weight: 600;
     color: var(--primary);
 }
@@ -339,6 +330,7 @@ header nav a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 2rem;
 }
 
 .contato-titulo {
@@ -346,7 +338,6 @@ header nav a {
     color: var(--tertiary);
     font-size: clamp(1rem, 4vw, 1.2rem);
     font-weight: 600;
-    margin-bottom: 2rem;
     text-align: center;
 }
 
@@ -354,49 +345,47 @@ header nav a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .card-contato {
-    width: 90px;
-    height: 80px;
+    width: clamp(75px, 20vw, 90px);
+    aspect-ratio: 1;
     background-color: var(--secondary);
     border-radius: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
+    text-decoration: none;
 }
 
 .card-contato img {
-    width: 30px;
+    width: clamp(30px, 8vw, 35px);
 }
 
 
 /* === FOOTER === */
-.linha {
-    width: 60px;
-    height: 2.5px;
-    background-color: var(--secondary);
-    margin-bottom: 1rem;
-    border-radius: 5px;
-}
-
 footer {
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
     background-color: var(--primary);
+    gap: 1rem;
 }
 
-footer p {
+.linha {
+    width: clamp(50px, 15vw, 70px);
+    height: 2px;
+    background-color: var(--secondary);
+    border-radius: 5px;
+}
+
+footer small {
     font-family: var(--font-primary);
     color: var(--tertiary);
+    text-align: center;
     font-weight: 600;
-    font-size: clamp(0.6rem, 2.5vw, 0.7rem);
-    margin: 0;
+    font-size: clamp(0.5rem, 2.5vw, 0.7rem);
 }

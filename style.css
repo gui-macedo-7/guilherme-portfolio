@@ -12,6 +12,8 @@
 
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Inter', sans-serif;
+
+    --section-spacing: clamp(2rem, 5vw, 4rem);
 }
 
 * {
@@ -35,14 +37,14 @@ body.scroll-disable {
 }
 
 [id] {
-    scroll-margin-top: 30px;
+    scroll-margin-top: 40px;
 }
 
 /* === HEADER === */
 header {
     background: var(--primary);
     width: 100%;
-    padding: 2rem;
+    padding-block: 2rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -100,10 +102,16 @@ nav {
     text-decoration: none;
 }
 
+/* Container reutilizável */
+.container {
+    width: min(100% - 2rem, 1200px);
+    margin-inline: auto;
+    overflow: hidden;
+}
 
 /* === SEÇÃO INTRO === */
 .section-intro {
-    padding: 5rem 1rem;
+    padding-block: 8rem 5rem;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -134,9 +142,17 @@ nav {
     font-size: clamp(0.6rem, 2vw, 0.9rem);
     border-radius: 20px;
     font-weight: 600;
-    transition: 0.2s ease;
+    transition: transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
     cursor: pointer;
     text-decoration: none;
+}
+
+.btn-cv:hover {
+    transform: translateY(-4px);
+    background-color: var(--secondary);
+    box-shadow: 0 10px 20px rgb(245, 66, 102, 0.35);
 }
 
 .intro-imagem img {
@@ -152,7 +168,7 @@ nav {
 
 /* === SEÇÃO SOBRE MIM === */
 .section-sobre {
-    padding: 2rem 1rem;
+    padding-block: var(--section-spacing);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -187,7 +203,7 @@ nav {
 
 /* === SEÇÃO TECNOLOGIAS === */
 .section-tecnologias {
-    padding: 3rem 1rem;
+    padding-block: var(--section-spacing);
 }
 
 .cards-tecnologias {
@@ -206,8 +222,7 @@ nav {
 }
 
 .card {
-    width: 100%;
-    max-width: 300px;
+    width: min(100%, 320px);
     justify-self: center;
     padding: 1rem;
     display: flex;
@@ -258,7 +273,7 @@ nav {
 
 /* === SEÇÃO PROJETOS === */
 .section-projetos {
-    padding: 2rem 1rem;
+    padding-block: var(--section-spacing);
 }
 
 .projetos-titulo {
@@ -280,7 +295,7 @@ nav {
 }
 
 .categoria-card {
-    width: clamp(140px, 38vw, 190px);
+    width: clamp(150px, 35vw, 220px);
     aspect-ratio: 1;
     border-radius: 1rem;
     border: 3px solid var(--secondary);
@@ -290,37 +305,51 @@ nav {
     flex-direction: column;
     justify-content: flex-end;
     text-decoration: none;
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.categoria-imagem {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform .4s ease;
 }
 
 .categoria-footer {
-    background-color: var(--secondary);
+    position: relative;
+    background: rgba(245, 66, 102, 0.9);
     padding: 1rem;
     z-index: 1;
 }
 
 .categoria-footer p {
     font-family: var(--font-primary);
-    font-size: clamp(0.7rem, 3vw, 1rem);
+    font-size: clamp(.7rem, 3vw, 1rem);
     font-weight: 600;
     color: var(--primary);
 }
 
-.destaque-img {
-    background-image: url();
+.projetos-container a:nth-child(1) .categoria-imagem {
+    background-image: url("img/destaques.png");
 }
 
-.htmlcss-img {
-    background-image: url();
+
+.projetos-container a:nth-child(2) .categoria-imagem {
+    background-image: url("img/html-css.png");
 }
 
-.javascript-img {
-    background-image: url();
+
+.projetos-container a:nth-child(3) .categoria-imagem {
+    background-image: url("img/javascript.png");
 }
 
 
 /* === SEÇÃO CONTATO === */
 .section-contato {
-    padding: 2rem 1rem;
+    padding-block: var(--section-spacing);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -347,15 +376,21 @@ nav {
     aspect-ratio: 1;
     background-color: var(--secondary);
     border-radius: 1rem;
+    border: 2px solid transparent;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     text-decoration: none;
+    transition: background-color 0.3s ease,
+        border 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.card-contato img {
-    width: clamp(30px, 8vw, 35px);
+.card-contato i {
+    font-size: clamp(30px, 8vw, 35px);
+    color: var(--primary);
+    transition: color 0.3s ease;
 }
 
 
@@ -387,11 +422,12 @@ footer small {
 
 /* == RESPONSIVIDADE == */
 
+
 /* TELA 768px */
+
 @media (min-width: 768px) {
 
     /* Seção HEADER - 768px */
-
     header {
         position: static;
     }
@@ -418,13 +454,11 @@ footer small {
     }
 
     /* Seção INTRODUÇÃO - 768px */
-
     .intro-imagem img {
         max-width: 160px;
     }
 
     /* Seção SOBRE MIM - 768px */
-
     .section-sobre {
         flex-direction: row;
         justify-content: space-evenly;
@@ -445,11 +479,8 @@ footer small {
     }
 
     /* Seção TECNOLOGIAS - 768px */
-
     .cards-tecnologias {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
     }
 
     /* Seção PROJETOS - 768px */
@@ -470,8 +501,8 @@ footer small {
         width: clamp(90px, 12vw, 100px);
     }
 
-    .card-contato img {
-        width: clamp(35px, 5vw, 43px);
+    .card-contato i {
+        font-size: clamp(35px, 5vw, 43px);
     }
 
     /* Seção FOOTER - 768px */
@@ -484,12 +515,36 @@ footer small {
     }
 }
 
+
 /* TELA 1024px */
+
 @media (min-width: 1024px) {
 
     /* HEADER - 1024px */
+    .menu {
+        gap: 3rem;
+    }
+
     .menu a {
+        position: relative;
+        padding: 0;
+        text-decoration: none;
         font-size: clamp(1.1rem, 2vw, 1.5rem);
+    }
+
+    .menu a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background-color: var(--secondary);
+        transition: width 0.3s ease;
+    }
+
+    .menu a:hover::after {
+        width: 100%;
     }
 
     /* Seção INTRODUÇÃO - 1024px */
@@ -525,6 +580,12 @@ footer small {
     }
 
     /* Seção PROJETOS - 1024px */
+    .categoria-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35),
+            0 0 20px rgba(245, 66, 102, 0.35)
+    }
+
     .projetos-titulo {
         font-size: clamp(1.2rem, 2vw, 1.5rem);
     }
@@ -534,8 +595,68 @@ footer small {
         font-size: clamp(1.2rem, 2vw, 1.5rem);
     }
 
+    .card-contato:hover {
+        background-color: var(--primary);
+        border: 2px solid var(--secondary);
+        transform: translateY(-6px);
+        box-shadow: 0 0 20px rgba(245, 66, 102, 0.25);
+    }
+
+    .card-contato:hover i {
+        color: var(--secondary);
+    }
+
     /* Seção FOOTER - 1024px */
     .linha {
         width: clamp(90px, 10vw, 120px);
+    }
+}
+
+
+/* TELA 1280px */
+
+@media (min-width: 1280px) {
+
+    /* Seção TECNOLOGIAS - 1024px */
+    .cards-tecnologias {
+        gap: 2rem;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+        height: 220px;
+        padding: 1.5rem;
+        justify-self: center;
+    }
+
+    .tecnologias-titulo {
+        font-size: clamp(1.2rem, 2vw, 1.5rem);
+    }
+
+    .card-titulo p {
+        font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+    }
+
+    .card .icons {
+        flex: 1;
+    }
+
+    .card .icons img {
+        width: clamp(27px, 2.5vw, 35px);
+    }
+
+    .tecnologias-descricao {
+        margin-top: auto;
+        font-size: clamp(0.7rem, 1vw, 0.9rem);
+    }
+
+    /* Seção PROJETOS - 1280px */
+    .projetos-container {
+        max-width: 900px;
+        margin: 0 auto;
+        gap: 1rem;
     }
 }

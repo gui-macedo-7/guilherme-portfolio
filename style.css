@@ -149,10 +149,13 @@ nav {
     text-decoration: none;
 }
 
-.btn-cv:hover {
-    transform: translateY(-4px);
-    background-color: var(--secondary);
-    box-shadow: 0 10px 20px rgb(245, 66, 102, 0.35);
+@media (hover: hover) and (pointer: fine) {
+
+    .btn-cv:hover {
+        transform: translateY(-4px);
+        background-color: var(--secondary);
+        box-shadow: 0 10px 20px rgb(245, 66, 102, 0.35);
+    }
 }
 
 .intro-imagem img {
